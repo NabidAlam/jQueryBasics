@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+<body>
+    <div id="parendDiv">
+        <p>jQuery DOM Traversal </p>
+        <ul class="parent-ul">
+            First List
+            <li>
+                item 1
+            </li>
+            <li class="child-list-imm">
+                item 2 
+            </li>
+            <li class="child-list">
+                item 3    <ul class="child-list"> I'm nested List </ul>
+            </li>
+            <li class="child-list-imm">
+                item 4
+            </li>
+            <li>
+
+                item 5 <ul class="child-list"> I'm nested List </ul>
+            </li>
+        </ul>
+        <ul class="parent-ul">
+            Second List
+            <li class="child-list-1">
+                item 1
+            </li>
+            <li class="child-list-1">
+                item 2
+            </li>
+        </ul>
+    </div>
+    
+</body>
+</html>
+<script type="text/javascript">
+    $(document).ready(function () {
+
+       //1. map()
+                //var listItems = $(".child-list").map(function () {
+                  //    return $(this).text().trim();
+
+                 //}).get();
+                 //console.log(listItems);
+        //2. children()
+                  // $('.parent-ul').children().css('color', '#FF4500');
+        //3. parent()
+                //  $('li.child-list').parent().css('color','#FF4500');
+        //4. parents()
+                //$('li.child-list').parents().css('color', '#FF4500');
+                //console.log($('li.child-list').parents());
+         //4.1 parents() with map() 
+                 //$('li.child-list').parents().map(function () {
+                 //    if ($(this).hasClass('parent-ul')) {
+                 //        $(this).css('color', '#FF4500');
+                 //    }
+                //});
+
+        //5. parentsUntil()
+                  //$('li.child-list').parentsUntil($('#parendDiv'),'.parent-ul').css('color', '#FF4500');
+        //6. sibling() 
+
+                 // $('li.child-list').siblings().css('color', '#FF4500');
+
+        // 7. prev()
+
+                //$('li.child-list').prev().css('color', '#FF4500');
+
+        //8.prevAll()
+
+                // $('li.child-list').prevAll().css('color', '#FF4500')
+        //8.prevUntil()
+
+                // $('li.child-list').prevUntil($('li.child-list'), '.child-list-imm').css('color', '#FF4500');
+        //8.next()
+
+                // $('li.child-list').next().css('color', '#FF4500');
+         //9.nextAll()
+                // $('li.child-list').nextAll().css('color', '#FF4500');
+         //10.nextUntil()
+              //    $('li.child-list').nextUntil($('li.child-list'), '.child-list-imm').css('color', '#FF4500');
+        //11. eq()
+          //      $('li').eq(6).css('color', '#FF4500');
+        //12. first() 
+            //   $('li').last().css('color', '#FF4500');
+        //13. each()
+             //$('li').each(function (i) {
+             // console.log(i + 1 + "." + $(this).text().trim());
+             //});
+        //14.find()
+        $('li').filter('.child-list').css('color', '#FF4500');
+
+            
+    });
+    
+</script>
+<style>
+    li{
+        margin: 10px 0 0 30px;
+        font-style:italic;
+    }
+    .child-list-1 {
+        margin: 10px 0 0 30px;
+        font-style: italic;
+    }
+    
+  
+</style>
