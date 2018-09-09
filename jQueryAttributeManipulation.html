@@ -13,7 +13,8 @@
      <label id="lblFirstName" class="my-font">First Name : </label><input type="text" id="txtInput" class="my-font" />
       <input id="chk" type="checkbox" checked="checked">
     <label id="txtMessage"> </label>
-    <button id="btn"> Add/Remove Style </button>
+    <!--<button id="btn"> Add/Remove Style </button>-->
+    <button id="btnTxtVal">Get Value</button>
 </body>
  
 </html>
@@ -43,6 +44,8 @@
         
         //set attr()
         //$('#paraText').attr('align', 'justify');
+        //var attrValue = $('#paraText').attr('class');
+        //console.log(attrValue);
         //if ($("#lblFirstName").hasClass('my-font')) {
         //    $('#txtInput').addClass('my-bg-color');
         //}
@@ -67,8 +70,15 @@
        // $('#txtInput').removeClass('my-font')
 
         //toggle() 
-        $("#btn").on("click", function () {
-            $("#lblFirstName").toggleClass('my-font');
-        })
+        //$("#btn").on("click", function () {
+        //    $("#lblFirstName").toggleClass('my-font');
+        //})
+        //val() 
+        //$('#btnTxtVal').on('click', function () {
+        //    alert($('#txtInput').val());
+        //})
+        //console.log ($('#paraText').val());
+        $('#txtInput').val("Arun Kumar")
+
     });
 </script>
