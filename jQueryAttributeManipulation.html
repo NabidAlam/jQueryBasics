@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <h2> jQuery Attribute Manipulation </h2>
+    <p id="paraText"> Hello! Welcome to jQuery World</p>
+     <label id="lblFirstName" class="my-font">First Name : </label><input type="text" id="txtInput" class="my-font" />
+      <input id="chk" type="checkbox" checked="checked">
+    <label id="txtMessage"> </label>
+    <button id="btn"> Add/Remove Style </button>
+</body>
+ 
+</html>
+<style>
+    .my-color{
+        color:orange;
+    }
+    .my-font{
+        font-style:italic;
+    }
+    .my-bg-color{
+        background-color:aqua;
+    }
+  
+</style>
+<script>
+    $(document).ready(function () {
+        //addClass()
+       // $('#paraText').addClass('my-color my-font');
+        //attr()
+        //$('#paraText').on('mouseenter', function () {
+        //    var attrValue = $('#paraText').attr('id');
+        //    $('#txtMessage').text('Attribute "id" Value of <p>: ' + attrValue);
+        //}).on('mouseleave', function () {
+        //    $('#txtMessage').text("");
+        //    })
+        
+        //set attr()
+        //$('#paraText').attr('align', 'justify');
+        //if ($("#lblFirstName").hasClass('my-font')) {
+        //    $('#txtInput').addClass('my-bg-color');
+        //}
+
+        //html() 
+       // console.log("HTML of <p> - " + $('#paraText').html());
+        //prop () 
+        //console.log("check box property value of checked attribute - " +  $('#chk').prop('checked'));
+
+       //  $('#chk').prop('checked',false)
+
+         // removeAttr() 
+       //  $('#lblFirstName').removeAttr('class');
+
+         //removeProp()
+            //$('#chk').prop("dummyProperty", "I'm dummy property");
+            //console.log($('#chk').prop("dummyProperty")); 
+            //$('#chk').removeProp("dummyProperty");
+            //console.log("After removing the prop the value of dummyProperty - ", $('#chk').prop("dummyProperty"));
+
+        //remove class
+       // $('#txtInput').removeClass('my-font')
+
+        //toggle() 
+        $("#btn").on("click", function () {
+            $("#lblFirstName").toggleClass('my-font');
+        })
+    });
+</script>
