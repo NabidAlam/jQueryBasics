@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <h2> jQuery Animation</h2>
+    <label id="lblFirstName" class="my-font">First Name : </label><input type="text" id="txtInput" class="my-font"   />
+    <button id="btnTxtVal">Click Me</button>
+
+</body>
+</html>
+<script>
+    $(document).ready(function () {
+        $('#btnTxtVal').on('click', function () {
+            //show()
+            //$("#txtInput").show()
+
+            //hide()
+            //$("#txtInput").hide()
+
+            //var txtInput = $("#txtInput");
+            //var btnTxtVal = $("#btnTxtVal");
+            //if (txtInput.is(":visible")) {
+            //    txtInput.toggle(false);
+            //    btnTxtVal.text("Show Text Box ")
+            //}
+            //else {
+            //    txtInput.toggle(true);
+            //    btnTxtVal.text("Hide Text Box ")
+            //}
+
+            //slideToggle()
+          //  $("#txtInput").slideToggle();
+           //fadeToggle()
+
+            //$("#txtInput").fadeToggle();
+            //slideDown()
+          //  $("#txtInput").slideDown();
+            //slideUp()
+            //$("#txtInput").slideUp(2000, function () {
+            //    console.log("slideUp execution completed");
+            //});
+
+            //fadeIn()
+            //$("#txtInput").fadeIn();
+            //$("#txtInput").fadeIn(1000, function () {
+            //});
+
+            //fadeOut()
+            //$("#txtInput").fadeOut();
+
+
+            //$("#lblFirstName").fadeTo("slow", Math.random(), function () {
+            //    console.log("fadeIn execution completed")
+            //})
+
+          //  $("#txtInput").fadeOut(400).delay(1000).fadeIn(400);
+
+            $("#txtInput").animate({
+                opacity: Math.random(),
+                width: "140px",
+            }, 400, function () { console.log("animate execution completed") });
+          
+        })
+    })
+</script>
