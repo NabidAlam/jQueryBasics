@@ -1,0 +1,141 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="jquery-ui.css" />
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"
+            integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E="
+            crossorigin="anonymous"></script>
+
+
+
+</head>
+<body>
+    <h1>jQuery UI</h1>
+    <!-- Accordion -->
+
+                
+                <!--<div id="accordion">
+                    <h3>First header</h3>
+                    <div>First content panel</div>
+                    <h3>Second header</h3>
+                    <div>Second content panel</div>
+                </div>-->
+           
+
+    <!-- Auto Complete -->
+
+            <div class="ui-widget">
+            <input id="autoComplete" type="text" />
+            </div>
+
+    <!--DatePicker-->
+
+            <!--<div class="ui-widget">
+            <input type="text" id="datepicker">
+            </div>-->
+
+    <!--Tab-->
+            <!--<div id="tabs">
+            <ul>
+                <li><a href="#tabs-1">Tab 1</a></li>
+                <li><a href="#tabs-2">Tab 2</a></li>
+                <li><a href="#tabs-3">Tab 3</a></li>
+            </ul>
+            <div id="tabs-1">
+                <p>Table 1 content.</p>
+            </div>
+            <div id="tabs-2">
+                <p>Tab 2 content.</p>
+            </div>
+            <div id="tabs-3">
+                <p>Tab 3 content.</p>
+
+            </div>
+        </div>-->
+
+    <!--Tooltip-->
+                <!--<div class="ui-widget">
+                    <label>First Name: </label>
+                    <input type="text" id="txtFirstName" title="" >
+                </div>-->
+</body>
+</html>
+<script type="text/javascript">
+
+    //Accordion 
+
+                //$( "#accordion" ).accordion({
+                //    //active: 1,  
+                //   // icons: { "header": "ui-icon-plus", "activeHeader": "ui-icon-minus" }
+                //});
+
+                //	$( "#icon-accordion" ).accordion({
+                //  active: 1
+                //});
+
+    //Auto Complete 
+
+                $("#autoComplete").autocomplete({
+                    source: ["apple", "orange", "grapes"],
+                    autoFocus: true,
+                    delay: 500,
+
+                });
+
+                //var source = $("#autoComplete").autocomplete("option", "source");
+                //$("#autoComplete").autocomplete("option", "source", ["c++", "java","javascript", "ASP"]);
+
+    // DatePicker 
+
+                //$(function () {
+                //    $("#datepicker").datepicker();
+                //});
+                //$("#datepicker").datepicker({
+                //    altFormat: "yyyy-mm-dd"
+                //});
+                //$("#datepicker").datepicker({
+                //    changeMonth: true,
+                //    changeYear: true,
+                //    dateFormat: "yy-mm-dd",
+                //    duration:"slow"
+                //});
+
+    //Tab 
+
+                //$("#tabs").tabs({
+                //    active: 1,
+       
+                //    event:"mouseover"
+                //});
+                //$("#tabs").tabs("disable");
+
+    //tooltip 
+
+                //$(document).ready(function () {
+                //    $("#txtFirstName").tooltip({
+                //        content: "Please Enter First Name",
+                //        position: { at: "right" },
+                //        hide: { effect: "explode", duration: 1000 },
+                //        close: function (event, ui) {
+                //            console.log("close event fired")
+                //        },
+                //        open: function (event, ui) {
+                //            console.log("open event fired")
+                //            console.log(ui);
+                //        },
+                //    });
+
+                //})
+
+                //$("#txtFirstName").tooltip({
+                //    content: "Please Enter First Name"
+                //  //  position: "right",
+                //  //  hide: { effect: "explode", duration: 1000 }
+                //});
+    
+</script>
